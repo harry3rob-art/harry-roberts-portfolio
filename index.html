@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Harry W. Roberts III — Brand & Product Marketing</title>
+<meta name="description" content="Positioning, messaging, and go-to-market work by Harry W. Roberts III. Brand builds across B2B tech, education, wellness, and a live SaaS product." />
+<style>
+  :root{
+    --ink:#16242b; --muted:#5d6b72; --line:#e7e9ea;
+    --teal:#1a6269; --teal-dark:#15454a; --cream:#fbfaf7; --gold:#c9a14a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; color:var(--ink); background:var(--cream);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:0 24px;}
+  a{color:var(--teal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* Header */
+  header.top{background:var(--teal-dark); color:#fff; padding:64px 0 56px;}
+  header.top .eyebrow{color:#9fd6cf; letter-spacing:.14em; text-transform:uppercase; font-size:13px; font-weight:600; margin:0 0 14px;}
+  header.top h1{font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:46px; line-height:1.08; margin:0 0 16px;}
+  header.top p.lede{font-size:19px; color:#dfeae8; max-width:620px; margin:0 0 26px;}
+  .links{display:flex; flex-wrap:wrap; gap:10px;}
+  .links a{
+    display:inline-block; background:rgba(255,255,255,.08); color:#fff;
+    border:1px solid rgba(255,255,255,.22); padding:9px 16px; border-radius:999px;
+    font-size:14px; font-weight:600;
+  }
+  .links a:hover{background:#fff; color:var(--teal-dark); text-decoration:none;}
+
+  /* Logo strip */
+  .clients{border-bottom:1px solid var(--line); background:#fff;}
+  .clients .wrap{display:flex; align-items:center; gap:14px 34px; flex-wrap:wrap; padding:22px 24px;}
+  .clients span.label{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+  .clients span.name{font-weight:700; color:var(--ink); font-size:16px; opacity:.78;}
+
+  /* Sections */
+  section{padding:54px 0;}
+  .section-head{max-width:640px; margin:0 0 30px;}
+  .section-head h2{font-family:Georgia,serif; font-size:30px; margin:0 0 8px;}
+  .section-head p{color:var(--muted); margin:0; font-size:17px;}
+
+  /* Case cards */
+  .case{
+    background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;
+    display:grid; grid-template-columns:1fr 1fr; margin-bottom:26px;
+    box-shadow:0 1px 2px rgba(20,40,45,.04);
+  }
+  .case .shot{background:#0d1518; min-height:240px; border-right:1px solid var(--line);}
+  .case .shot img{display:block; width:100%; height:100%; object-fit:cover; object-position:top;}
+  .case .body{padding:28px 30px;}
+  .case .tag{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); font-weight:700; margin:0 0 8px;}
+  .case h3{font-size:22px; margin:0 0 4px;}
+  .case .sub{color:var(--muted); font-size:14px; margin:0 0 16px;}
+  .case h4{font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink); margin:16px 0 4px;}
+  .case p{margin:0 0 8px; font-size:15.5px;}
+  .case .visit{display:inline-block; margin-top:12px; font-weight:600; font-size:14.5px;}
+  .case:nth-child(even) .shot{order:2; border-right:none; border-left:1px solid var(--line);}
+
+  /* Product highlight */
+  .product{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 1px 2px rgba(20,40,45,.04);}
+  .product .grid{display:grid; grid-template-columns:1.05fr .95fr;}
+  .product .copy{padding:34px 36px;}
+  .product .copy .tag{color:var(--gold);}
+  .product .shot{background:#f4f2ec; display:flex; align-items:center; justify-content:center;}
+  .product .shot img{width:100%; height:100%; object-fit:cover; object-position:top; border-left:1px solid var(--line);}
+
+  /* Footer */
+  footer{background:var(--teal-dark); color:#fff; padding:50px 0; margin-top:10px; text-align:center;}
+  footer h2{font-family:Georgia,serif; font-size:26px; margin:0 0 10px;}
+  footer p{color:#cfe2df; margin:0 0 20px;}
+  footer a.cta{display:inline-block; background:var(--gold); color:#2a1f06; font-weight:700; padding:12px 26px; border-radius:999px;}
+  footer a.cta:hover{text-decoration:none; filter:brightness(1.06);}
+  footer .small{font-size:13px; color:#8fb4b0; margin-top:22px;}
+  footer .small a{color:#cfe2df;}
+
+  @media (max-width:780px){
+    header.top h1{font-size:34px;}
+    .case, .product .grid{grid-template-columns:1fr;}
+    .case .shot{border-right:none; border-bottom:1px solid var(--line); min-height:200px;}
+    .case:nth-child(even) .shot{order:0; border-left:none;}
+    .product .shot img{border-left:none; border-top:1px solid var(--line);}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Brand &amp; Product Marketing</p>
+    <h1>Harry W. Roberts III</h1>
+    <p class="lede">I turn technical, hard-to-explain products into clear positioning that gets the right people to act. Brand and go-to-market work across B2B technology, education, wellness, and a SaaS product I built and shipped myself.</p>
+    <div class="links">
+      <a href="mailto:harry3rob@gmail.com">harry3rob@gmail.com</a>
+      <a href="https://www.linkedin.com/in/harrythe3rd/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://snapgist.app" target="_blank" rel="noopener">SnapGist (my app)</a>
+    </div>
+  </div>
+</header>
+
+<div class="clients">
+  <div class="wrap">
+    <span class="label">Brands I've built for</span>
+    <span class="name">Burgland Technology Partners</span>
+    <span class="name">SSG Educational</span>
+    <span class="name">Anita B. Volpe</span>
+    <span class="name">Moonieful</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p>Each of these started with a business that did good work but couldn't say it clearly. The job was the same every time: find the one problem the buyer actually feels, then build the message around it.</p>
+    </div>
+
+    <!-- Burgland -->
+    <div class="case">
+      <div class="shot"><img src="img/burgland.jpeg" alt="Burgland Technology Partners homepage" /></div>
+      <div class="body">
+        <p class="tag">B2B Technology</p>
+        <h3>Burgland Technology Partners</h3>
+        <p class="sub">IT consulting · San Antonio, TX</p>
+        <h4>The problem</h4>
+        <p>Another IT consultant in a crowded market, easy to mistake for everyone else.</p>
+        <h4>What I built</h4>
+        <p>Positioning that reframed them as technology partners, not vendors, and a site narrative that turns complex tech into business outcomes a non-technical buyer understands. Same B2B technology buyer that ad-tech and SaaS teams sell into.</p>
+        <a class="visit" href="https://www.burglandtech.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SSG -->
+    <div class="case">
+      <div class="shot"><img src="img/ssg.jpeg" alt="SSG Educational homepage" /></div>
+      <div class="body">
+        <p class="tag">Education · Sells to districts</p>
+        <h3>SSG Educational</h3>
+        <p class="sub">Trauma-informed teaching methodology</p>
+        <h4>The problem</h4>
+        <p>A powerful method and a founder's mission, but no clear offer a school district could say yes to.</p>
+        <h4>What I built</h4>
+        <p>A value proposition that pairs the emotional story with hard outcomes, so the brand leads with proof, not just heart. The message sells transformation to the people holding the budget.</p>
+        <a class="visit" href="https://www.ssgeducational.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Anita -->
+    <div class="case">
+      <div class="shot"><img src="img/anita.jpeg" alt="Anita B. Volpe homepage" /></div>
+      <div class="body">
+        <p class="tag">Consumer Wellness</p>
+        <h3>Anita B. Volpe</h3>
+        <p class="sub">Beauty and wellness consultant</p>
+        <h4>The problem</h4>
+        <p>A career changer with real expertise and no brand that signaled it.</p>
+        <h4>What I built</h4>
+        <p>A trust-first brand built on her own story, with messaging aimed straight at the woman who has tried everything and is tired of it. Authority through narrative, not hype.</p>
+        <a class="visit" href="https://www.anitabvolpe.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Moonieful -->
+    <div class="case">
+      <div class="shot"><img src="img/moonieful.jpeg" alt="Moonieful homepage" /></div>
+      <div class="body">
+        <p class="tag">My studio</p>
+        <h3>Moonieful</h3>
+        <p class="sub">Brand clarity studio · Co-founder</p>
+        <h4>The problem</h4>
+        <p>Good service founders who stay invisible to strangers online because their message is foggy.</p>
+        <h4>What I built</h4>
+        <p>The whole thing. The brand, the positioning, the offer ladder, and the site. The promise is simple: a stranger should get your value as fast as someone you meet in person.</p>
+        <a class="visit" href="https://moonieful.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>And one I built from scratch</h2>
+      <p>Not just marketing a product. Building one.</p>
+    </div>
+    <div class="product">
+      <div class="grid">
+        <div class="copy">
+          <p class="tag">SaaS Product · Founder</p>
+          <h3 style="font-size:24px; margin:0 0 10px;">SnapGist</h3>
+          <p style="margin:0 0 10px;">SnapGist scans any website and scores how clearly its message comes across to a first-time visitor. I took it from idea to a live, paid product: the positioning, the pricing, the onboarding, the launch.</p>
+          <p style="margin:0 0 10px;">It is the clearest proof of how I think about product marketing, because I had to do all of it, then convince strangers to scan their own site.</p>
+          <a class="visit" href="https://snapgist.app" target="_blank" rel="noopener">Try SnapGist &rarr;</a>
+        </div>
+        <div class="shot"><img src="img/snapgist.jpeg" alt="SnapGist landing page" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p>Open to product marketing and brand roles.</p>
+    <a class="cta" href="mailto:harry3rob@gmail.com">harry3rob@gmail.com</a>
+    <p class="small">
+      <a href="https://www.linkedin.com/in/harrythe3rd/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://snapgist.app" target="_blank" rel="noopener">snapgist.app</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
