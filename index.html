@@ -22,7 +22,10 @@
   a:hover{text-decoration:underline;}
 
   /* Header */
-  header.top{background:var(--teal-dark); color:#fff; padding:64px 0 56px;}
+  header.top{background:var(--teal-dark); color:#fff;}
+  header.top .wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:38px; align-items:center; padding:56px 24px;}
+  header.top .photo{border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.28);}
+  header.top .photo img{display:block; width:100%; height:100%; object-fit:cover;}
   header.top .eyebrow{color:#9fd6cf; letter-spacing:.14em; text-transform:uppercase; font-size:13px; font-weight:600; margin:0 0 14px;}
   header.top h1{font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:46px; line-height:1.08; margin:0 0 16px;}
   header.top p.lede{font-size:19px; color:#dfeae8; max-width:620px; margin:0 0 26px;}
@@ -81,6 +84,8 @@
   footer .small a{color:#cfe2df;}
 
   @media (max-width:780px){
+    header.top .wrap{grid-template-columns:1fr;}
+    header.top .photo{order:-1; max-width:300px;}
     header.top h1{font-size:34px;}
     .case, .product .grid{grid-template-columns:1fr;}
     .case .shot{border-right:none; border-bottom:1px solid var(--line); min-height:200px;}
@@ -93,6 +98,7 @@
 
 <header class="top">
   <div class="wrap">
+    <div class="intro">
     <p class="eyebrow">Brand &amp; Product Marketing</p>
     <h1>Harry W. Roberts III</h1>
     <p class="lede">I turn technical, hard-to-explain products into clear positioning that gets the right people to act. Brand and go-to-market work across B2B technology, education, wellness, and a SaaS product I built and shipped myself.</p>
@@ -101,6 +107,8 @@
       <a href="https://www.linkedin.com/in/harrythe3rd/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://snapgist.app" target="_blank" rel="noopener">SnapGist (my app)</a>
     </div>
+    </div>
+    <div class="photo"><img src="img/harry.jpg" alt="Harry W. Roberts III" /></div>
   </div>
 </header>
 
