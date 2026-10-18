@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Harry W. Roberts III — Brand & Product Marketing</title>
+<title>Harry W. Roberts III, Brand &amp; Product Marketing</title>
 <meta name="description" content="Positioning, messaging, and go-to-market work by Harry W. Roberts III. Brand builds across B2B tech, education, wellness, and a live SaaS product." />
 <style>
   :root{
@@ -41,7 +41,6 @@
   .clients{border-bottom:1px solid var(--line); background:#fff;}
   .clients .wrap{display:flex; align-items:center; gap:14px 34px; flex-wrap:wrap; padding:22px 24px;}
   .clients span.label{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600;}
-  .clients span.name{font-weight:700; color:var(--ink); font-size:16px; opacity:.78;}
 
   /* Sections */
   section{padding:54px 0;}
@@ -64,7 +63,49 @@
   .case h4{font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink); margin:16px 0 4px;}
   .case p{margin:0 0 8px; font-size:15.5px;}
   .case .visit{display:inline-block; margin-top:12px; font-weight:600; font-size:14.5px;}
-  .case:nth-child(even) .shot{order:2; border-right:none; border-left:1px solid var(--line);}
+  /* Timeline (shared) */
+  .clients img.logo{height:36px; width:auto; display:block;}
+  .timeline{position:relative; padding-left:34px;}
+  .timeline::before{content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  .timeline .year{
+    position:relative; font-family:Georgia,"Times New Roman",serif; font-size:26px; font-weight:700;
+    color:var(--teal-dark); margin:8px 0 18px;
+  }
+  .timeline .year::before{
+    content:""; position:absolute; left:-34px; top:50%; width:16px; height:16px; margin-top:-8px;
+    border-radius:50%; background:var(--gold); border:3px solid var(--cream); box-shadow:0 0 0 1px var(--gold);
+  }
+  .case .shot img{object-position:left top;}
+  .case.flip .shot{order:2; border-right:none; border-left:1px solid var(--line);}
+  .case .lesson{margin:16px 0 0; padding-top:12px; border-top:1px solid var(--line); font-size:15.5px; color:var(--teal-dark);}
+  .case .lesson span{font-weight:600; color:var(--teal);}
+  .case .lesson span::after{content:": "; font-weight:400;}
+  .milestone{
+    display:flex; gap:28px; align-items:center; background:#f3ecd9; border-top:3px solid var(--gold);
+    border-bottom:1px solid #e6d9b3; border-radius:4px; padding:26px 30px; margin:0 0 26px;
+  }
+  .milestone img{flex:0 0 190px; width:190px; height:auto; display:block; border-radius:4px; box-shadow:0 6px 18px rgba(20,40,45,.18);}
+  .milestone img.wide{flex:0 1 260px; width:260px; max-width:100%;}
+  .milestone .m-text{flex:1; min-width:0;}
+  .milestone h3{font-family:Georgia,serif; font-size:22px; line-height:1.25; margin:0 0 10px;}
+  .milestone p{margin:0 0 14px; font-size:15.5px;}
+  .milestone a.btn{
+    display:inline-block; background:var(--gold); color:#2a1f06; font-weight:700; font-size:14.5px;
+    padding:11px 22px; border-radius:999px;
+  }
+  .milestone a.btn:hover{text-decoration:none; filter:brightness(1.06);}
+  .milestone.slim{display:block; padding:16px 22px; font-size:15.5px;}
+  .milestone.slim p{margin:0;}
+  ol.ladder{list-style:none; counter-reset:step; margin:26px auto 0; padding:0; max-width:620px; text-align:left;}
+  ol.ladder li{counter-increment:step; position:relative; padding:0 0 22px 52px; margin:0;}
+  ol.ladder li::before{
+    content:counter(step); position:absolute; left:0; top:0; width:34px; height:34px; border-radius:50%;
+    border:2px solid var(--gold); color:var(--gold); font-family:Georgia,serif; font-weight:700; font-size:17px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  ol.ladder li p{margin:0 0 8px; color:#e3eeec;}
+  ol.ladder li a{color:var(--gold); font-weight:700;}
+  /* end Timeline */
 
   /* Product highlight */
   .product{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 1px 2px rgba(20,40,45,.04);}
@@ -89,7 +130,18 @@
     header.top h1{font-size:34px;}
     .case, .product .grid{grid-template-columns:1fr;}
     .case .shot{border-right:none; border-bottom:1px solid var(--line); min-height:200px;}
-    .case:nth-child(even) .shot{order:0; border-left:none;}
+    .case.flip .shot{order:0; border-left:none;}
+    /* Timeline (shared, 780px) */
+    .timeline{padding-left:26px;}
+    .timeline::before{left:7px;}
+    .timeline .year{font-size:23px;}
+    .timeline .year::before{left:-26px;}
+    .milestone{flex-direction:column; align-items:flex-start; padding:22px 20px;}
+    .milestone img{flex:0 0 auto; width:150px;}
+    .milestone img.wide{flex:0 0 auto; width:100%; max-width:320px;}
+    .milestone.slim{padding:14px 18px;}
+    ol.ladder li{padding-left:46px;}
+    /* end Timeline 780px */
     .product .shot img{border-left:none; border-top:1px solid var(--line);}
   }
 </style>
@@ -115,128 +167,115 @@
 <div class="clients">
   <div class="wrap">
     <span class="label">Brands I've built for</span>
-    <span class="name">TECHSIS</span>
-    <span class="name">Courtney Wilson Enterprises</span>
-    <span class="name">Burgland Technology Partners</span>
-    <span class="name">SSG Educational</span>
-    <span class="name">Anita B. Volpe</span>
-    <span class="name">Moonieful</span>
+    <img class="logo" src="img/logos/burgland.webp" alt="Burgland Technology Partners" />
+    <img class="logo" src="img/logos/anita-b-volpe.webp" alt="Anita B. Volpe" />
+    <img class="logo" src="img/logos/ssg-educational.webp" alt="SSG Educational" />
+    <img class="logo" src="img/logos/techsis.webp" alt="TECHSIS" />
+    <img class="logo" src="img/logos/courtney-wilson-enterprises.webp" alt="Courtney Wilson Enterprises" />
+    <img class="logo" src="img/logos/sincerra-kids.webp" alt="Sincerra Kids" />
   </div>
 </div>
 
 <section>
   <div class="wrap">
     <div class="section-head">
-      <h2>Selected work</h2>
-      <p>Each of these started with a business that did good work but couldn't say it clearly. The job was the same every time: find the one problem the buyer actually feels, then build the message around it.</p>
+      <h2>How my marketing got sharper, client by client</h2>
+      <p>Miki and I started out making brands look professional: she designed the brands, and I wrote the emails, copy and outreach plans behind each one. Those early clients taught me that a professional look doesn't tell a stranger who a business is for, so Miki named that problem in her Brand Fog book and I built SnapGist, an app that scores a website the way a stranger reads it. Now every project starts with research on the buyer who decides and ends with a SnapGist score.</p>
     </div>
 
-    <!-- TECHSIS -->
-    <div class="case">
-      <div class="shot"><img style="object-position:left top" src="img/techsis.jpeg" alt="New TECHSIS homepage for the Light NU Broadband Academy" /></div>
-      <div class="body">
-        <p class="tag">Workforce Training · Sells to workforce boards</p>
-        <h3>TECHSIS</h3>
-        <p class="sub">Fiber optic career training · Texas</p>
-        <h4>The problem</h4>
-        <p>Deep fiber expertise and a one-week broadband bootcamp, but buyers couldn't tell whether TECHSIS was a training school, a sales company or a grant partner.</p>
-        <h4>What I built</h4>
-        <p>Buyer research that named the workforce development board as the real customer, a homepage built around that buyer's first question (are participants still working 90 days later?), and four pricing options benchmarked against Texas college fiber programs. A SnapGist clarity scan took the homepage from three out of 10 to eight.</p>
-      </div>
-    </div>
-
-    <!-- Sincerra Kids -->
-    <div class="case">
-      <div class="shot"><img style="object-position:left top" src="img/sincerra-kids.jpeg" alt="New Sincerra Kids homepage written for parents" /></div>
-      <div class="body">
-        <p class="tag">Nonprofit · Two audiences</p>
-        <h3>Sincerra Kids</h3>
-        <p class="sub">A Courtney Wilson Enterprises nonprofit · Western New York</p>
-        <h4>The problem</h4>
-        <p>A youth nonprofit whose website spoke only to donors, so the families it was built for had no way to apply.</p>
-        <h4>What I built</h4>
-        <p>A two-path site with families on the homepage and funders on their own giving page, plus the copy, page designs and a sponsor pitch deck. The new headline names the exact fees kids are quitting over, so a parent knows in one line whether Sincerra Kids can help.</p>
-      </div>
-    </div>
-
-    <!-- Burgland -->
-    <div class="case">
-      <div class="shot"><img src="img/burgland.jpeg" alt="Burgland Technology Partners homepage" /></div>
-      <div class="body">
-        <p class="tag">B2B Technology</p>
-        <h3>Burgland Technology Partners</h3>
-        <p class="sub">IT consulting · San Antonio, TX</p>
-        <h4>The problem</h4>
-        <p>Another IT consultant in a crowded market, easy to mistake for everyone else.</p>
-        <h4>What I built</h4>
-        <p>Positioning that reframed them as technology partners, not vendors, and a site narrative that turns complex tech into business outcomes a non-technical buyer understands. Same B2B technology buyer that ad-tech and SaaS teams sell into.</p>
-        <a class="visit" href="https://www.burglandtech.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
-      </div>
-    </div>
-
-    <!-- SSG -->
-    <div class="case">
-      <div class="shot"><img src="img/ssg.jpeg" alt="SSG Educational homepage" /></div>
-      <div class="body">
-        <p class="tag">Education · Sells to districts</p>
-        <h3>SSG Educational</h3>
-        <p class="sub">Trauma-informed teaching methodology</p>
-        <h4>The problem</h4>
-        <p>A powerful method and a founder's mission, but no clear offer a school district could say yes to.</p>
-        <h4>What I built</h4>
-        <p>A value proposition that pairs the emotional story with hard outcomes, so the brand leads with proof, not just heart. The message sells transformation to the people holding the budget.</p>
-        <a class="visit" href="https://www.ssgeducational.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
-      </div>
-    </div>
-
-    <!-- Anita -->
-    <div class="case">
-      <div class="shot"><img src="img/anita.jpeg" alt="Anita B. Volpe homepage" /></div>
-      <div class="body">
-        <p class="tag">Consumer Wellness</p>
-        <h3>Anita B. Volpe</h3>
-        <p class="sub">Beauty and wellness consultant</p>
-        <h4>The problem</h4>
-        <p>A career changer with real expertise and no brand that signaled it.</p>
-        <h4>What I built</h4>
-        <p>A trust-first brand built on her own story, with messaging aimed straight at the woman who has tried everything and is tired of it. Authority through narrative, not hype.</p>
-        <a class="visit" href="https://www.anitabvolpe.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
-      </div>
-    </div>
-
-    <!-- Moonieful -->
-    <div class="case">
-      <div class="shot"><img src="img/moonieful.jpeg" alt="Moonieful homepage" /></div>
-      <div class="body">
-        <p class="tag">My studio</p>
-        <h3>Moonieful</h3>
-        <p class="sub">Brand clarity studio · Co-founder</p>
-        <h4>The problem</h4>
-        <p>Good service founders who stay invisible to strangers online because their message is foggy.</p>
-        <h4>What I built</h4>
-        <p>The whole thing. The brand, the positioning, the offer ladder, and the site. The promise is simple: a stranger should get your value as fast as someone you meet in person.</p>
-        <a class="visit" href="https://moonieful.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0;">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>And one I built from scratch</h2>
-      <p>Not just marketing a product. Building one.</p>
-    </div>
-    <div class="product">
-      <div class="grid">
-        <div class="copy">
-          <p class="tag">SaaS Product · Founder</p>
-          <h3 style="font-size:24px; margin:0 0 10px;">SnapGist</h3>
-          <p style="margin:0 0 10px;">SnapGist scans any website and scores how clearly its message comes across to a first-time visitor. I took it from idea to a live, paid product: the positioning, the pricing, the onboarding, the launch.</p>
-          <p style="margin:0 0 10px;">It is the clearest proof of how I think about product marketing, because I had to do all of it, then convince strangers to scan their own site.</p>
-          <a class="visit" href="https://snapgist.app" target="_blank" rel="noopener">Try SnapGist &rarr;</a>
+    <div class="timeline">
+      <p class="year">2024 to 2025</p>
+      <div class="case">
+        <div class="shot"><img src="img/burgland.jpeg" alt="Burgland Technology Partners homepage" /></div>
+        <div class="body">
+          <p class="tag">B2B Technology</p>
+          <h3>Burgland Technology Partners</h3>
+          <p class="sub">IT consulting &middot; San Antonio, TX &middot; 2024</p>
+          <h4>The problem</h4>
+          <p>Brianna Landry spent her career in electrical engineering, Department of Defense software contracts and bank technology at USAA, then formed Burgland Technology Partners in 2023 to bring that experience to growing businesses. In her intake she named her hardest problem in her own words: &ldquo;identifying the right customers, funding and scaling the business.&rdquo;</p>
+          <h4>What I built</h4>
+          <p>Miki designed the brand and we built a website with a client login and dashboard, while I wrote Brianna's email copy and a client outreach plan that walked her through the five levels of customer awareness. Our strategy pages also covered branding basics and a list of grants for women business owners.</p>
+          <a class="visit" href="https://www.burglandtech.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+          <p class="lesson"><span>What it taught me</span>Brianna asked for help finding the right customers, and we answered with a polished brand and general advice, so now I research who buys before I write a word.</p>
         </div>
-        <div class="shot"><img src="img/snapgist.jpeg" alt="SnapGist landing page" /></div>
+      </div>
+      <div class="case flip">
+        <div class="shot"><img src="img/anita.jpeg" alt="Anita B. Volpe homepage" /></div>
+        <div class="body">
+          <p class="tag">Consumer Wellness</p>
+          <h3>Anita B. Volpe</h3>
+          <p class="sub">Beauty and wellness consultant &middot; 2024 to 2025</p>
+          <h4>The problem</h4>
+          <p>After 20 years managing medical offices, Anita Volpe left healthcare to help women at retirement age get their energy and their confidence back. She came to us in November 2024 with the knowledge and the warmth, and she needed a brand that would carry both to women meeting her for the first time.</p>
+          <h4>What I built</h4>
+          <p>Miki designed Anita's logo, brand board and visuals, and I wrote her sales script and a marketing and copywriting guide with a six-month email calendar. From there I sent her weekly email through Kit and met with her for strategy calls through mid-2025.</p>
+          <a class="visit" href="https://www.anitabvolpe.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+          <p class="lesson"><span>What it taught me</span>Anita's weekly emails did the selling our visuals couldn't do alone, and I've let the words carry the sale ever since.</p>
+        </div>
+      </div>
+      <div class="case">
+        <div class="shot"><img src="img/ssg.jpeg" alt="SSG Educational homepage" /></div>
+        <div class="body">
+          <p class="tag">Education &middot; Sells to districts</p>
+          <h3>SSG Educational</h3>
+          <p class="sub">Trauma-informed teaching methodology &middot; 2024 to 2025</p>
+          <h4>The problem</h4>
+          <p>Dr. Sandra Gillins spent more than 40 years in education, including years as a teacher and principal inside a juvenile detention school, and she sums up her method in four words: &ldquo;I teach the teachers.&rdquo; Teachers use her method every day, but the contract comes from school district leaders, who decide which training their teachers get.</p>
+          <h4>What I built</h4>
+          <p>Miki built the visual brand, and I wrote Dr. Gillins a marketing and copywriting guide with homepage copy and welcome emails, plus an SEO keyword sheet aimed at the district leaders who buy teacher training. In March 2025 we sat down with her again for a one-hour review.</p>
+          <a class="visit" href="https://www.ssgeducational.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+          <p class="lesson"><span>What it taught me</span>Teachers use Dr. Gillins' method while district leaders pay for it, which taught me that the person you serve and the person who signs can be different people.</p>
+        </div>
+      </div>
+      <p class="year">2026</p>
+      <p class="milestone slim">Miki's Brand Fog book went to print in July 2026, 88 pages built on what our early clients taught us: a stranger judges a business on three signals (its message, its visuals and its positioning) before reaching out.</p>
+      <div class="milestone">
+        <div class="m-text">
+          <h3>Then I built SnapGist to make Brand Fog measurable</h3>
+          <p>Starting in June 2026, I built SnapGist end to end, from the scoring to the positioning, pricing and onboarding. SnapGist scores a website the way a first-time stranger reads it, and Miki and I run it on our own client work too. The scan is free, so try it on any site you know.</p>
+          <a class="btn" href="https://snapgist.app" target="_blank" rel="noopener">Try a free SnapGist scan</a>
+        </div>
+        <img src="img/snapgist.jpeg" class="wide" alt="SnapGist homepage, the website scoring app I built" />
+      </div>
+      <!-- TECHSIS -->
+      <div class="case flip">
+        <div class="shot"><img src="img/techsis.jpeg" alt="New TECHSIS homepage for the Light NU Broadband Academy" /></div>
+        <div class="body">
+          <p class="tag">Workforce Training · Sells to workforce boards</p>
+          <h3>TECHSIS</h3>
+          <p class="sub">Fiber optic career training · Texas · September 2026</p>
+          <h4>The problem</h4>
+          <p>Deep fiber expertise and a one-week broadband bootcamp, but buyers couldn't tell whether TECHSIS was a training school, a sales company or a grant partner.</p>
+          <h4>What I built</h4>
+          <p>Buyer research that named the workforce development board as the real customer, a homepage built around that buyer's first question (are participants still working 90 days later?), and four pricing options benchmarked against Texas college fiber programs. A SnapGist clarity scan took the homepage from three out of 10 to eight.</p>
+        </div>
+      </div>
+      <!-- Sincerra Kids -->
+      <div class="case">
+        <div class="shot"><img src="img/sincerra-kids.jpeg" alt="New Sincerra Kids homepage written for parents" /></div>
+        <div class="body">
+          <p class="tag">Nonprofit · Two audiences</p>
+          <h3>Sincerra Kids</h3>
+          <p class="sub">A Courtney Wilson Enterprises nonprofit · Western New York · October 2026</p>
+          <h4>The problem</h4>
+          <p>A youth nonprofit whose website spoke only to donors, so the families it was built for had no way to apply.</p>
+          <h4>What I built</h4>
+          <p>A two-path site with families on the homepage and funders on their own giving page, plus the copy, page designs and a sponsor pitch deck. The new headline names the exact fees kids are quitting over, so a parent knows in one line whether Sincerra Kids can help.</p>
+        </div>
+      </div>
+      <!-- Moonieful -->
+      <div class="case flip">
+        <div class="shot"><img src="img/moonieful.jpeg" alt="Moonieful homepage" /></div>
+        <div class="body">
+          <p class="tag">My studio</p>
+          <h3>Moonieful</h3>
+          <p class="sub">Brand clarity studio · Co-founder</p>
+          <h4>The problem</h4>
+          <p>Good service founders who stay invisible to strangers online because their message is foggy.</p>
+          <h4>What I built</h4>
+          <p>The whole thing. The brand, the positioning, the offer ladder, and the site. The promise is simple: a stranger should get your value as fast as someone you meet in person.</p>
+          <a class="visit" href="https://moonieful.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
